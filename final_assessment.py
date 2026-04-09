@@ -239,7 +239,35 @@ print(range1)
 print(variance1)
 print(std_dev1)
 
+50
+1.6444904774999998
+1.2823768859036722
+
 # Interpretation:
 # Game 1 has low variance and standard deviation,
 # indicating consistent and predictable results.
 
+# *MEASUARES OF DISPERSION GAME 2*
+
+def simulate_game1_(n=500000):
+    results = []
+    for i in range (n):
+        results.append(5-game1())
+    return results 
+
+data2 = simulate_game2_()
+
+range2 = np.max(data2) - np.min(data2)
+variance2 = np.var(data2)
+std_dev2 = np.std(data2)
+
+print(range2)
+print(variance2)
+print(std_dev2)
+
+500000
+2499975.0
+1581.130924370275
+
+#shows very high variability due to the large jackpot, 
+#making it much more risky.
