@@ -140,4 +140,24 @@ print(club)
 # Interpretation:
 # The results vary because the probability of winning is very low,
 # while the prize is extremely large, making the simulation unstable.
+
 # Running the simulation multiple times to observe variability
+
+for i in range (10):
+    print(simulate_game2())
+
+(6.0, -1.0)
+(6.0, -1.0)
+(4.0, 1.0)
+(3.0, 2.0)
+(3.0, 2.0)
+(0.0, 5.0)
+(5.0, 0.0)
+(4.0, 1.0)
+(5.0, 0.0)
+(5.0, 0.0)
+
+# Interpretation:
+# The initial simulation produced varying results, which seemed unusual.
+# To investigate this, the simulation was run multiple times.
+# The results showed significant variation between runs.
