@@ -162,7 +162,7 @@ for i in range (10):
 # To investigate this, the simulation was run multiple times.
 # The results showed significant variation between runs.
 
-# *MEASUARES OF DISPERSION GAME 1*
+# *MEASUARES OF CENTRAL TENDENCY GAME 1*
 
 import numpy as np
 from scipy import stats
@@ -192,7 +192,7 @@ ModeResult(mode=np.int64(5), count=np.int64(98955))
 # The median and mode are both €5, indicating that in most cases
 # the club earns €5, as players usually win nothing.
 
-# *MEASUARES OF DISPERSION GAME 2*
+# *MEASUARES OF CENTRAL TENDENCY GAME 2*
 
 def simulate_game2_(n=100000):
     results = []
@@ -221,6 +221,25 @@ ModeResult(mode=np.int64(5), count=np.int64(99999))
 # However, the mean is significantly lower due to the rare €500,000 payout,
 # which greatly reduces the average profit.
 
+# *MEASUARES OF DISPERSION GAME 1*
 
+def simulate_game1_(n=100000):
+    results = []
+    for i in range (n):
+        results.append(5-game1())
+    return results 
 
+data1 = simulate_game1_()
+
+range1 = np.max(data1) - np.min(data1)
+variance1 = np.var(data1)
+std_dev1 = np.std(data1)
+
+print(range1)
+print(variance1)
+print(std_dev1)
+
+# Interpretation:
+# Game 1 has low variance and standard deviation,
+# indicating consistent and predictable results.
 
