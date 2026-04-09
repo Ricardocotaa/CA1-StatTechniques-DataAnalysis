@@ -161,3 +161,33 @@ for i in range (10):
 # The initial simulation produced varying results, which seemed unusual.
 # To investigate this, the simulation was run multiple times.
 # The results showed significant variation between runs.
+
+# *MEASUARES OF DISPERSION GAME 1*
+
+import numpy as np
+from scipy import stats
+
+def simulate_game1_(n=100000):
+    results = []
+    for i in range (n):
+        results.append(5-game1())
+    return results 
+
+data1= simulate_game1_()
+
+mean1 = np.mean(data1)
+median1 = np.median(data1)
+mode1 = stats.mode(data1)
+
+print(mean1)
+print(median1)
+print(mode1)
+
+4.87685
+5.0
+ModeResult(mode=np.int64(5), count=np.int64(98955))
+
+# Interpretation:
+# The mean profit for the club is approximately €4.88 per game.
+# The median and mode are both €5, indicating that in most cases
+# the club earns €5, as players usually win nothing.
