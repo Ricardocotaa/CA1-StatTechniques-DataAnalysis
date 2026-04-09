@@ -39,3 +39,20 @@ print(Ex_club)
 # *EXPECTED VALUE SECOND GAME*
 
 # The player pays €5 and picks 3 letters (all lower case AND upper case English letters, repetition allowed). If they guess all correctly, they win €500,000
+# Probability of winning
+
+Plll= 1/52*1/52*1/52
+#Expected value for gamer
+#Jackpot = 500000
+
+Ex_v2 = Plll*500000
+print(Ex_v2)
+3.55598543468366
+#Expected value for club
+
+Ex_club = 5 - Ex_v2
+print(Ex_club)
+1.44401456531634
+# Interpretation:
+# The player wins on average about €3.55 per game,
+# while the club earns approximately €1.44 per game.
