@@ -191,3 +191,36 @@ ModeResult(mode=np.int64(5), count=np.int64(98955))
 # The mean profit for the club is approximately €4.88 per game.
 # The median and mode are both €5, indicating that in most cases
 # the club earns €5, as players usually win nothing.
+
+# *MEASUARES OF DISPERSION GAME 2*
+
+def simulate_game2_(n=100000):
+    results = []
+    for i in range (n):
+        results.append(5-game2())
+    return results 
+
+data2= simulate_game2_()
+
+mean2 = np.mean(data2)
+median2 = np.median(data2)
+mode2 = stats.mode(data2)
+
+print(mean2)
+print(median2)
+print(mode2)
+
+0.0
+5.0
+ModeResult(mode=np.int64(5), count=np.int64(99999))
+
+# Interpretation:
+# The median and mode are both €5, indicating that in most cases
+# the club earns €5, as players usually win nothing.
+
+# However, the mean is significantly lower due to the rare €500,000 payout,
+# which greatly reduces the average profit.
+
+
+
+
