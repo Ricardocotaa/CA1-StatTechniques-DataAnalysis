@@ -36,3 +36,4 @@ print(Ex_club)
 # Interpretation:
 # The player wins on average about €0.11 per game,
 # while the club earns approximately €4.88 per game.
+
