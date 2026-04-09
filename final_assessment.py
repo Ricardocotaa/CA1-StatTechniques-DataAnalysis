@@ -56,3 +56,39 @@ print(Ex_club)
 # Interpretation:
 # The player wins on average about €3.55 per game,
 # while the club earns approximately €1.44 per game.
+# *GAME 1 SIMULATION*
+def game1():
+    win_data = [
+        [100, 1/26*1/26*1/26*1/10*1/10],
+        [50, 1/26*1/26*25/26*1/10*1/10 + 1/26*25/26*1/26*1/10*1/10 + 25/26*1/26*1/26*1/10*1/10],
+        [25, 1/26*25/26*25/26*1/10*1/10 + 25/26*1/26*25/26*1/10*1/10 + 25/26*25/26*1/26*1/10*1/10],
+        [10, 25/26*25/26*25/26*1/10*1/10]
+    ]
+    random_num = random.random()
+    cumulative_propability = 0
+    
+    for wins in win_data:
+        cumulative_propability += wins[1]
+        if cumulative_propability >= random_num:
+            return wins[0]
+    return 0
+def simulate_game1(n=100000):
+    total = 0
+    for i in range (n):
+        total += game1()
+
+    EV_gamer = total / n
+    EV_club = 5 - EV_gamer
+
+    return EV_gamer, EV_club
+
+gamer, club = simulate_game1()
+
+print(gamer)
+print(club)
+0.11805
+4.88195
+# Interpretation:
+# The player wins about €0.11 on average per game,
+# but since they pay €5 to play, this results in a loss of about €4.88.
+# The club therefore earns approximately €4.88 per game.
