@@ -6,3 +6,19 @@
 # Two letters, both numbers	€50
 # One letter, both numbers	€25
 # No letter, both numbers	€10
+import pandas as pd
+import random
+import matplotlib.pyplot as plt
+#Probabilities 
+
+# 3 letters correct + both numbers
+Plllnn = 1/26*1/26*1/26*1/10*1/10
+
+# 2 letters correct + both numbers
+Pllnn = 1/26*1/26*25/26*1/10*1/10 + 1/26*25/26*1/26*1/10*1/10 + 25/26*1/26*1/26*1/10*1/10
+
+# 1 letter correct + both numbers
+Pln = 1/26*25/26*25/26*1/10*1/10 + 25/26*1/26*25/26*1/10*1/10 + 25/26*25/26*1/26*1/10*1/10 
+
+# 0 letters correct + both numbers
+Pnn = 25/26*25/26*25/26*1/10*1/10
