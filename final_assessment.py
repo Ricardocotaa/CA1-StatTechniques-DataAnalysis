@@ -22,3 +22,17 @@ Plnn = 1/26*25/26*25/26*1/10*1/10 + 25/26*1/26*25/26*1/10*1/10 + 25/26*25/26*1/2
 
 # 0 letters correct + both numbers
 Pnn = 25/26*25/26*25/26*1/10*1/10
+#Expected value for gamer
+
+Ex_v = Plllnn*100 + Pllnn*50 + Plnn*25 + Pnn*10
+
+print(Ex_v)
+0.1177600136549841
+#Expected value for club
+
+Ex_club = 5 - Ex_v
+print(Ex_club)
+4.882239986345016
+# Interpretation:
+# The player wins on average about €0.11 per game,
+# while the club earns approximately €4.88 per game.
